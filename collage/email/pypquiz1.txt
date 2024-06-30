@@ -1,0 +1,90 @@
+1.which of the following is correct? 
+def split_and_join(line):
+    # write your code here
+    line = line.split()
+    line = "-".join(line)
+    return line
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
+
+#sample input 
+this is a string
+
+a) this-is-a-string
+b) This-is-a string
+c) this-Is a-string
+d) this is a string
+
+Ans: a
+
+2. which of the following is correct?
+     count = 0
+while(True):
+   if count % 3 == 0:
+       print(count, end = " ")
+   if(count > 15):
+       break;
+   count += 1
+
+a) 0 1 2...15
+b) Infinite loop
+c) 0 3 6 9 12 15
+d) 0 3 6 9 12
+
+Ans: c
+
+3.which of the following is correct?
+def solve(a):
+   a = [1, 3, 5]
+a = [2, 4, 6]
+print(a)
+solve(a)
+print(a)
+
+a) [2,4,6].[2,4,6]
+b) [2,4,6],[1,3,5]
+c) [1,3,5],[1,3,5]
+d) none of these
+
+Ans:a
+
+4.What will be the output of the following.
+ a = [1, 2]
+print(a * 3)
+
+a) Error
+b) [1,2]
+c) [1,2,1,2]
+d) [1,2,1,2,1,2]
+
+Ans: d
+
+5.which of the following is correct?
+  numbers = (4, 7, 19, 2, 89, 45, 72, 22)
+  sorted_numbers = sorted(numbers)
+  even = lambda a: a % 2 == 0
+  even_numbers = filter(even, sorted_numbers)
+  print(type(even_numbers))
+
+a) filter
+b) int
+c) list
+d) tuple
+
+Ans:a
+
+6.___ function is used to check whether an object is recursive or not.
+
+a) isnonrecursive()
+b) isreadable()
+c) isrecursive()
+d) issimple()
+Ans: c
+
+
+
+
+
+

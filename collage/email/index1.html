@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title> Email & Password validation </title>
+</head>
+<body>
+   <form action="#0">
+       <h3> Email & Password validation check </h3>
+       <label class="emailBox">
+           <input type="email" id="email" placeholder="Email">
+           <span class="emailtext"></span>
+       </label>
+
+       <label class="passwordBox">
+           <input type="password" id="password" placeholder="password">
+           <span class="passwordtext"></span>
+       </label>
+       <input type="submit" value="check">
+    </form>
+    <script>
+      const email=document.getElementById("email");
+      const password=document.getElementById("password");
+   
+      email.addEventListener('input',()=>{
+         const emailBox=document.querySelector('emailbox');
+         const emailtext=document.querySelector('emailtext');
+         const emailPattern=/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/
+         
+         if(email.value.match(emailPattern)){
+            emailbox.classList.add('valid');
+            emailbox.classlist.remove('invalid');
+            emailText.InnerHTML = "Your email address is valid";
+ 
+         }else{
+            emailbox.classList.add('valid');
+            emailbox.classlist.remove('invalid');
+            emailText.InnerHTML = "Must be a valid email address";
+            
+      });
+        email.addEventListener('input',()=>{
+         const passwordBox=document.querySelector('passwordBox');
+         const passwordtext=document.querySelector('passwordtext');
+         const passwordPattern=/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+
+         
+         if(password.value.match(passwordPattern)){
+            passwordBox.classList.add('valid');
+            passwordBox.classlist.remove('invalid');
+            passwordtext.InnerHTML = "Your password is valid";
+ 
+         }else{
+            passwordBox.classList.add('valid');
+            passwordBox.classlist.remove('invalid');
+             passwordtext.InnerHTML = "Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.";
+            
+      });
+   </script>
+</body>
+</html>
+ 
